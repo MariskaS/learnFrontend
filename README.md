@@ -3,4 +3,4 @@
 
 ## Stage #1
 
-- [Get Started](lectures/getStarted/getStarted.jpg) 
+- [Get Started](lectures/getStarted/getStarted.md) 

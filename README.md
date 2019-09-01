@@ -1,8 +1,9 @@
 # learnFrontend v 0.2
 учебный материал (переписываем старый материал)
 
-### FlexBox
-- [FlexBox](lectures/flexBox/flexBox.md) 
+### HTML & CSS
+- [FlexBox](lectures/html_css/flexBox/flexBox.md) 
+- [Grid Layout](lectures/html_css/grid/grid.md) 
 
 
 

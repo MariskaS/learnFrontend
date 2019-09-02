@@ -43,12 +43,17 @@
 Большинство грид свойств не наследуются, что означает то, что ваш вложенный грид не будет наследовать значения своего родительского грида. Это позволяет вам вносить изменения в родительский грид, без непреднамеренного влияния на вложенный грид.
 
 ## Инспектор Грид 
+Интспектор гридов в DevTools визуализирует линии гридов и отступы между ними, что очень полезно если у вас сложный грид.  
+Для Firefox есть встроенная тулза, пример использование ниже:  
+![example-devToolsFF.png](example-devToolsFF.png) 
+
+Для Google Chrome есть различные плагины типа [Css Grid Highlighter for Chrome](https://github.com/ademilter/chrome-css-grid-highlighter)
 
 ## Домашнее задание (делать в указанном порядке)
 1. ознакомиться с [Sass/Scss](https://sass-lang.com/documentation/variables)
 1. ознакомиться с [Less](http://lesscss.org/#variables)
 1. переписать [код](https://codepen.io/MariskaS/pen/GRKvbwY) на Sass и на Scss
-1. почитать [css-tricks.com/snippets/css/complete-guide-grid](https://css-tricks.com/snippets/css/complete-guide-grid/) *(P.S. если что то не понятно, смело используйте Google и ищите другой источник информации)*
+1. почитать - [Вёрстка на Grid в CSS. Полное руководство и справочник](https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-grid-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-220508316f8b) *(P.S. если что то не понятно, смело используйте Google и ищите другой источник информации)*
 1. написать на код для 2х гридов как на картинках:  
     - используйте **Less**:  
     ![home_work_grid_1.png](home_work_grid_1.png)
@@ -58,6 +63,7 @@
 
 ## Полезные ссылки
 - [google.com](https://www.google.com/) 
+- [Вёрстка на Grid в CSS. Полное руководство и справочник](https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-grid-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-220508316f8b) 
 - [Правильная верстка CSS Grid - webformyself](https://webformyself.com/pravilnaya-verstka-css-grid/) 
 - [Основные понятия Grid Layout
 ](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)

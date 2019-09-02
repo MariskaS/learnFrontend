@@ -31,3 +31,5 @@
 ### JavaScript
 - [Как устроен JavaScript - Дуглас Крокфорд](books/javascript/Как_устроен_JavaScript.pdf)
 
+## Материал для лабы 
+[учебный материал (на примере разбора лендинга)](lectures/future_lab_lectures.md)

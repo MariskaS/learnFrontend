@@ -54,7 +54,7 @@
 1. ознакомиться с [Less](http://lesscss.org/#variables)
 1. переписать [код](https://codepen.io/MariskaS/pen/GRKvbwY) на Sass и на Scss
 1. почитать - [Вёрстка на Grid в CSS. Полное руководство и справочник](https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-grid-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-220508316f8b) *(P.S. если что то не понятно, смело используйте Google и ищите другой источник информации)*
-1. написать на код для 2х гридов как на картинках:  
+1. написать код для 2х гридов как на картинках:  
     - используйте **Less**:  
     ![home_work_grid_1.png](home_work_grid_1.png)
 

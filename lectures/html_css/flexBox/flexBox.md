@@ -184,7 +184,7 @@ P.S. - при использовании **float** нам приходилось
 **Enjoy! :)**
 
 ## Полезные ссылки
-- [google.com](https://www.google.com/)
+- [CSS Gap creates a bright future for margins in Flex as well as Grid](https://bryanlrobinson.com/blog/gap-provides-bright-future-for-margins-in-flex-as-well-as-grid/?fbclid=IwAR0Fxrjl7-epkEKe-aSYFj0tl5ZZJLxme3wb5tpsQUxCy_eQ5E1LlHrodsg)
 - [Вёрстка реальных проектов на гридах](https://css-live.ru/articles/vyorstka-realnyx-proektov-na-gridax-css-grid-layout-uzhe-sejchas.html)
 - [Flexbox playground](https://codepen.io/MariskaS/pen/vYBxzGN) - тут можно поиграться с FlexBox.
 - [flexboxfroggy.com](https://flexboxfroggy.com) - игрушка для быстрого изучения FlexBox.

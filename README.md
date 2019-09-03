@@ -2,6 +2,7 @@
 учебный материал (переписываем старый материал)
 
 ### HTML & CSS
+- [Путь критического рендеринга](lectures/html_css/rendering/rendering.md) 
 - [BEM](lectures/html_css/bem/bem.md) 
 - [FlexBox](lectures/html_css/flexBox/flexBox.md) 
 - [Grid Layout](lectures/html_css/grid/grid.md) 

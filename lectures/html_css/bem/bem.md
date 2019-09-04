@@ -132,7 +132,7 @@
 </div>
 ``` 
 
-##Полезные ссылки:
+## Полезные ссылки:
 - [BEM methodology (ru)](https://ru.bem.info/methodology/)
 - [BEM introduction (eng)](http://getbem.com/introduction/)
 - [Practical introduction (eng)](https://medium.com/@ZeeCoder/a-practical-introduction-to-the-bem-css-methodology-eeef578bac8c)

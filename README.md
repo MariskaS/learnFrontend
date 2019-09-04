@@ -2,6 +2,7 @@
 учебный материал (переписываем старый материал)
 
 ### HTML & CSS
+- [Несколько важный вещей которые следует знать о table](lectures/html_css/table/table.md) 
 - [Путь критического рендеринга](lectures/html_css/rendering/rendering.md) 
 - [BEM](lectures/html_css/bem/bem.md) 
 - [FlexBox](lectures/html_css/flexBox/flexBox.md) 

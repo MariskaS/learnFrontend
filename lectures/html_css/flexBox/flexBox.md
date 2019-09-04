@@ -187,6 +187,7 @@ P.S. - при использовании **float** нам приходилось
 - [CSS Gap creates a bright future for margins in Flex as well as Grid](https://bryanlrobinson.com/blog/gap-provides-bright-future-for-margins-in-flex-as-well-as-grid/?fbclid=IwAR0Fxrjl7-epkEKe-aSYFj0tl5ZZJLxme3wb5tpsQUxCy_eQ5E1LlHrodsg)
 - [Вёрстка реальных проектов на гридах](https://css-live.ru/articles/vyorstka-realnyx-proektov-na-gridax-css-grid-layout-uzhe-sejchas.html)
 - [Flexbox playground](https://codepen.io/MariskaS/pen/vYBxzGN) - тут можно поиграться с FlexBox.
+- [Better, Simpler Grid Systems](https://philipwalton.github.io/solved-by-flexbox/demos/grids/) - сетка на FlexBox.
 - [flexboxfroggy.com](https://flexboxfroggy.com) - игрушка для быстрого изучения FlexBox.
 - [css-tricks.com/snippets/css/a-guide-to-flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Этот сайт стоит запомнить, т.к он содержит много полезной информации.
 - [css-tricks.com/all-about-floats](https://css-tricks.com/all-about-floats/) - все про float. Так же пользуясь отладчиком можно посмотреть как использовались float в ранних версиях [bootstrap.com](https://getbootstrap.com/docs/3.3/css/#grid) (на примере grid system).

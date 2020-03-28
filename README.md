@@ -1,25 +1,43 @@
-# learnFrontend v 0.2
-учебный материал (переписываем старый материал)
+**learnFrontend v 0.3**
 
-### HTML & CSS
-- [Box Model](lectures/html_css/box_model/box_model.md) 
-- [Несколько важных вещей которые следует знать о table](lectures/html_css/table/table.md) 
-- [Путь критического рендеринга](lectures/html_css/rendering/rendering.md) 
-- [BEM](lectures/html_css/bem/bem.md) 
-- [FlexBox](lectures/html_css/flexBox/flexBox.md) 
-- [Grid Layout](lectures/html_css/grid/grid.md) 
-- [CSS препроцессоры](lectures/html_css/css_preprocessors/css_preprocessors.md)
+## [Front End Developer Interview - short answers](lectures/interview.md)
 
-## Заметки
-### HTML & CSS
-- Если видите сайт с интересными ux решениями - открывайте отладчик и смотрите, как это работает. В будущем вам это обязательно пригодится, чтобы улучшить свой код или быстро придумать решение для сложной задачи.
-- Респонив - о нем нужно думать до того как начал верстать (даже если этого нет в дизайне и менеджер проекта клянется Маском, что приложение только для desktop).
-- Вы можете получить макет от дизайнера не только в psd, это может быть [zeplin](https://zeplin.io/) [invision](https://www.invisionapp.com/) [figma](https://www.figma.com).  
- Все эти системы генерят css автоматически, но ни в коем случае не нужно бездумно копипастить эти стили для верстки проекта. 
-- **HTML Email** в Epam есть приложение для сбора стандартных писем для нашего hr отдела [Lego](http://static.cdn.epam.com/uploads/25de0eda2b8cb5eb21bf2ae0f5b479f7/LEGO/DEFAULT/lego_v2.4.html) - [Documentation](https://kb.epam.com/display/EPMHRMKB/How+to+create+a+newsletter). Но также вы можете собрать свой небольшой проект, который будет при сборке подставлять ваши стили инлайном и минифицировать код.
-- Когда попадаешь на проект с нуля, лучше создать свою UI страничку для компонентов (что-то вроде [Bootstrap](https://getbootstrap.com/docs/4.3/content/typography/)), чтоб потом было проще найти элементы, которые уже сверстаны. В React есть [Storybook](https://storybook.js.org/docs/examples/) - [Storybook Documentation](https://storybook.js.org/docs/guides/guide-react/) -  позволяет создавать компоненты пользовательского интерфейса React-приложений и заниматься настройкой их внешнего вида в интерактивном графическом окружении, которое упрощает работу с компонентами React.
+## HTML & CSS
+1. [Box Model](lectures/html_css/box_model/box_model.md) 
+1. [Несколько важных вещей которые следует знать о table](lectures/html_css/table/table.md) 
+1. [Путь критического рендеринга](lectures/html_css/rendering/rendering.md) 
+1. [BEM](lectures/html_css/bem/bem.md) 
+1. [FlexBox](lectures/html_css/flexBox/flexBox.md) 
+1. [Grid Layout](lectures/html_css/grid/grid.md) 
+1. [CSS препроцессоры](lectures/html_css/css_preprocessors/css_preprocessors.md)
+1. [CSS псевдо классы](lectures/html_css/pseudo_classes/pseudo_classes.md)
 
-## Книги
+## Алгоритмы
+1. [Основные типы алгоритмов](lectures/algorithms/baseTypes/baseTypes.md)
+1. [Что такое нотация «О-большое» и как ей пользоваться?](lectures/algorithms/bigOBase/bigO.md)
+
+## JS
+1. [Что такое DOM?](lectures/foundation/dom/dom.md)
+1. [Фибоначчи](lectures/js/fibonacci/fibonacci.md)
+1. [Рекурсия](lectures/js/recursive/recursive.md)
+1. [Контекст выполнения](lectures/js/execution_context/execution_context.md)
+1. [Цепочки областей видимости](lectures/js/visibility_chains/visibility_chains.md)
+1. [Что такое цикл событий?](lectures/js/event_loop/event_loop.md)
+1. [Что такое замыкание?](lectures/js/closures/closures.md)
+1. [Как работает ключевое слово this?](lectures/js/this/this.md)
+1. [Что такое REST и почему эта технология популярна?](lectures/js/rest/rest.md)
+1. [Object-oriented Programming - OOP](lectures/foundation/oop/oop.md)
+1. [Мой сайт тормозит. Расскажите о шагах по его диагностированию и исправлению. Опишите популярные подходы к оптимизации, и расскажите о том, когда их следует использовать.](lectures/foundation/optimization/optimization.md)
+
+## Angular
+1. [Angular 9. Что нового?](lectures/angular/angular.md)
+
+# Полезные материалы
+- [Курс «JavaScript/Front-end - Бесплатный курс от сообщества The Rolling Scopes в России](https://rs.school/russia/#basic-knowledge)
+- [Собеседование для фронтенд-разработчика на JavaScript: самые лучшие вопросы](https://habr.com/ru/company/ruvds/blog/334538/)
+- [Шпаргалка для технического собеседования](https://habr.com/ru/company/mailru/blog/350326/)
+
+# Книги
 ### HTML & CSS
 - [HTML5 недостающее руководство - Oreilly](books/html_css/HTML5_Недостающее_руководство.pdf)
 - [Mobile HTML5 - Oreilly](books/html_css/Mobile_HTML5_proglib.pdf)

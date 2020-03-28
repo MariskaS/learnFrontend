@@ -60,4 +60,5 @@ JavaScript может добавлять узлы в DOM, парсер оста�
 - [Как ускорить рендеринг table (P.S. юзайте table-layout:fixed )](https://www.w3.org/TR/CSS2/tables.html#propdef-table-layout) 
 - [Процесс визуализации - онлайн книга Ilya Grigorik](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=ru) 
 - [Chrome DevTools - Performance Documentation](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/) - В Google Chrome на вкладке *Performance* можно посмотреть как рендерится страничка.  
+- [DOM](lectures/foundation/dom/dom.md)
 

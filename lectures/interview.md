@@ -6,29 +6,27 @@
 <summary>1. Box Model</summary>
 <div>
 
-To get started explaining the box model in CSS we need to understand that everything in CSS is a box.
-It doesn't matter what you have in CSS. 
-It might be a text, a button, a div, or a span. Every single element in CSS is a box and may have width, 
-height, padding, borders, and margins.
+Every element in CSS is a box.
+Box-Model areas: border, margin, padding, content.
 
 If we are talking about Box Model we need to remember about `box-sizing`.  
-the most popular value is `border-box`.  
-By default `box sizing` is set to `content box`  
+> default value `content box`
 
+the most popular value is `border-box`.  
+  
 **For example:**   
 I have a box with the property `width: 100px` 
-What will happen to this box if I set `padding: 20px` and `border: 2px`?   
-So it's now 100 pixels plus 20 plus 2pixels.  
-Extra pixels add to the total size of my box so now the box is getting bigger - 122px.
+if I set `padding: 20px` and `border: 2px` 
+By default extra pixels add to the total size of my box so now `width` equivalent 122px.
 
-So if I use `box-sizing: border-box,` padding and border will be included
+But, if I use `box-sizing: border-box,` padding and border will be included
 in my box and that means that I will get just 100px size.
 
 </div>
 </details>
 
 <details>
-<summary>aria-label, aria-labelledby</summary>
+<summary>2. Accessibility</summary>
 <div>  
 
 ### aria-label
@@ -86,6 +84,34 @@ Example of `aria-labelledby` attribute - Radio Groups:
 ![ARIA_relationship](ada/ARIA_relationship.png)  
 
 - [How I do an accessibility check](https://www.youtube.com/watch?v=cOmehxAU_4s)
+- [Intro to ARIA -- A11ycasts](https://www.youtube.com/watch?v=g9Qff0b-lHk)
+- [The Best Pro Tips for A11Y in Angular - JavaScript Marathon](https://www.youtube.com/watch?v=JsS052A1CVg&list=PL8TAr06qc9fWkHW3A0CANMT5DeWG5pSxZ&index=2&t=0s)
+- [Repository of the app built](https://github.com/danmt/a11y-tips) 
+- [WAI-ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
+- [DEV account with a library of a11y in Angular articles](https://dev.to/danmt)
+- [simplyaccessible.com](http://simplyaccessible.com/)
+- [angular.io/guide/accessibility](https://angular.io/guide/accessibility)
+- [Angular Accessibility 101](https://labs.thisdot.co/training/AngularAccessibility101)
+
+</div>
+</details>
+
+<details>
+<summary>3. What are Sass, Less, and Stylus? Why do people use them? How does something like Compass relate to Sass?</summary>
+<div>
+
+### What are Sass, Less, and Stylus? 
+ - CSS preprocessors.
+ 
+### Why do people use them?
+ - in order not to duplicate the code, you can create mixins and use the functions
+ - convenient nested syntax
+ - variables (in pure CSS now it is also possible to use variables, but this is not always convenient)
+ 
+### How does something like Compass relate to Sass?
+Compass is a framework for CSS(built on Sass).
+like Sass, Compass supports variables, mixins, nesting, functions, mathematical calculations 
+
 </div>
 </details>
 
@@ -176,16 +202,21 @@ Each module in Node.js has its own context, so it cannot interfere with other mo
 <details>
 <summary>12. What's the difference between AngularJS and Angular</summary>
 <div>
- Angular is based on TypeScript while AngularJS is based on JavaScript. 
- 
+
+Angular is based on TypeScript while AngularJS is based on JavaScript.  
+
 - Architecture:
 **Angular JS:** Supports Model-View-Controller design. The view processes the 
 information available in the model to generate the output.  
-**Angular:** Uses components and directives. Components are the directives with a template.
+**Angular:** Uses components and directives. Components are the directives with a template.  
 
 - Mobile support:
 **Angular JS:** Does not supported by mobile browsers.  
-**Angular:** But Angular supported by all the popular mobile browsers.
+**Angular:** But Angular supported by all the popular mobile browsers.  
+
+- Routing:
+**AngularJS:** uses `$routeprovider.when()`.
+**Angular:** uses `@RouteConfig{(…)}`.
 
 
 </div>
@@ -277,10 +308,91 @@ localStorage.setItem('temp', Date.now().toString())
 </details>
 
 <details>
-<summary>3. Что такое замыкания. Как они работают</summary>
+<summary>3. Closures</summary>
 <div>
-замыкания - это функция внутри другой функции.
-See [closures](closures/closures.md)
+
+> Closures are the primary mechanism used to enable data privacy.  
+
+To use a closure, you need to define a function inside another function.  
+
+The variables of the outer scope are accessible inside the inner scope:  
+```javascript
+function outerFunc() {
+  // the outer scope
+  let outerVar = 'I am outside!';
+
+  function innerFunc() {
+    // the inner scope
+    console.log(outerVar); // => logs "I am outside!"
+  }
+
+  innerFunc();
+}
+
+outerFunc();
+``` 
+**So, 2 things:**   
+1. Scopes`области` can be nested`вложенные`
+1. The variables of the outer scope are accessible inside the inner scope
+
+**Example - setTimeout() callback:** 
+```javascript
+const message = 'Hello, World!';
+
+setTimeout(function callback() {
+  console.log(message); // logs "Hello, World!"
+}, 1000);
+```  
+The `callback()` **is a closure** because it captures the variable `message`.  
+
+**Example - forEach():** 
+```javascript
+let countEven = 0;
+const items = [1, 5, 100, 10];
+
+items.forEach(function iterator(number) {
+  if (number % 2 === 0) {
+    countEven++;
+  }
+});
+
+countEven; // => 2
+```  
+The `iterator` **is a closure** because it captures the variable `countEven`.  
+
+**Example:**  
+*In the example above, the `.get()` method is defined inside the scope of `getSecret()`,
+which gives it access to any variables from `getSecret()`, and makes it a privileged method. 
+In this case, the parameter, `secret`.*
+```javascript
+const getSecret = (secret) => {
+  return {
+    get: () => secret
+  };
+};
+
+test('Closure for object privacy.', assert => {
+  const msg = '.get() should have access to the closure.';
+  const expected = 1;
+  const obj = getSecret(1);
+
+  const actual = obj.get();
+
+  try {
+    assert.ok(secret, 'This throws an error.');
+  } catch (e) {
+    assert.ok(true, `The secret var is only available
+      to privileged methods.`);
+  }
+
+  assert.equal(actual, expected, msg);
+  assert.end();
+});
+```
+
+- [closures](js/closures/closures.md)
+- [A Simple Explanation of JavaScript Closures](https://dmitripavlutin.com/simple-explanation-of-javascript-closures/)
+- [Master the JavaScript Interview: What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
 
 </div>
 </details>
@@ -288,6 +400,8 @@ See [closures](closures/closures.md)
 <details>
 <summary>4. var vs let vs const?</summary>
 <div>
+
+> Always use `const`, except when you know that the variable will change.  
 
 **var:** 
 - function scoped
@@ -308,9 +422,9 @@ const person = {
 }
 person.name = 'Kim Kardashian West' // ✅ It's work.
 person = {} // ❌ Assignment to constant variable. -> Error.
-```  
+```   
 
-> Always use `const`, except when you know that the variable will change.  
+![letScope.png](js/letScope.png)
 
 - [var vs let vs const in JavaScript](https://tylermcginnis.com/var-let-const/)
 </div>
@@ -752,7 +866,7 @@ Onresize(event) {
 того чтобы оно было максимально производительно.
 
 Полезные ссылки:  
-- [Angular_9_Что_нового? - см. раздел АОТ ](angular.md)
+- [Angular_9_Что_нового? - см. раздел АОТ ](angular/angular.md)
 
 </div>
 </details>
@@ -789,6 +903,7 @@ Observable на который мы можем подписаться.
 <details>
 <summary>23. Какие функции несет в себе RxJs</summary>
 <div>
+
 Это библиотека которая позволяет работать с асинхронным кодом и превращать его
 в Observables.
 
@@ -797,6 +912,9 @@ Observable на который мы можем подписаться.
 разных стримов. Например часто бывает что нам нужно получить от бека данные и
  после получения сделать еще запрос и т.п. 
  Если делать это через Promises нас ждут большие сложности.
+
+### Helpful links:
+- [Евгений Поздняков — RxJS: производительность и утечки памяти в большом приложении](https://www.youtube.com/watch?v=7806msvJ1HE&t=513s)
 
 </div>
 </details>
@@ -1042,8 +1160,12 @@ P.S. -> в примере ниже мы клонируем `req` и это об�
 <summary>29. Зачем Zone.js</summary>
 <div>
 
-Zone.js присутствует в ядре энгулар. В Angular с ее помощью все приложение разделяется на секторы, каждый из которых 
-запоминает контекст асинхронного выполнения. Такой подход после завершения асинхронной операции 
+**Zone.js** - играет одну из важнейших ролей в энгулар. Он отвечает за реактивность.
+
+Zone.js присутствует в ядре энгулар. В Angular с ее помощью все приложение разделяется 
+на секторы, каждый из которых 
+запоминает контекст асинхронного выполнения. Такой подход после завершения 
+асинхронной операции  
 позволяет запустить механизм ChangeDetection(отслеживания изменений) в нужном секторе.
 
 Т.е. благодаря Zone.js мы точно знаем что в этот момент закончились определенные 
@@ -1337,6 +1459,8 @@ This tree of child scopes normally parallels the DOM where they’re attached.
 
 **Dirty checking** - change detection technique`[tɛkˈnik]` 
 
+>By default, Angular will check every time something may have changed, this is called dirty checking.
+
 When any property changes angular runs a check or $digest cycle. 
 This checks for changes in value of any property by comparing it with its previous value. 
 If any property has changed it’s get updated in View or model.  
@@ -1370,9 +1494,125 @@ the last Digest cycle.
 </details>
 
 
+<details>
+<summary>45. Angular Resolvers.</summary>
+<div>
+
+Это история про роутинг.  
+
+Используем RouterModule в который передаем массив объектов
+![1.png](angular/resolvers/1.png)  
+
+Обращаться к указанным в массиве путям мы будем получать указанный компонент.
+Обращение может быть:
+- из шаблона при помощи директивы `routerLink="/component"`
+- из самого компонента, например `this.router.navigateByUrl('component')`
+![2.png](angular/resolvers/2.png)  
+
+
+Когда мы обращаемся к пути у нас начинает инициализироваться компонент.
+В тот момент когда к пути обратились, но компонент еще не проинициализировался можно воспользоваться 
+Resolvers & Guards.  
+![3.png](angular/resolvers/3.png)  
+![11.png](angular/resolvers/11.png)  
+
+Resolvers & Guards очень похожи  
+![4.png](angular/resolvers/4.png)   
+Эти методы отрабатывают до инициализации компонента.
+Могут ходить на сервер
+Спрашивать какую то информацию у пользователя.
+Разница в том что Resolvers возвращает данные, а Guards вернет `true || false`   
+
+Поскольку Guards отвечает за сам доступ к компоненту, он отработает первым  
+![12.png](angular/resolvers/12.png)   
+
+**Ниже методы Guards:**
+![5.png](angular/resolvers/5.png)  
+
+**Ниже методы Resolvers:**  
+![6.png](angular/resolvers/6.png)  
+Всего один метод который что то делает перед переходом на роут.
+
+## Как использовать Resolvers
+1. Создать класс-резолвер(это будет сервис), имплементирующий интерфейс Resolve.    
+![7.png](angular/resolvers/7.png)   
+
+2. Добавить его в providers.  
+![8.png](angular/resolvers/8.png)   
+
+3. Указать резолвер в параметре resolve соответствующего роута.  
+![9.png](angular/resolvers/9.png)  
+
+4. Получить данные в компоненте.  
+![10.png](angular/resolvers/10.png)  
+
+### Как посмотреть на все события роутинга:
+```
+RouterModule.forRoot(routes, {
+	enableTracing: true
+})
+```
+
+### Обработка ошибок 
+![13.png](angular/resolvers/13.png)  
+
+### Главная проблема резолверов. Или почему многие говорят всегда использовать сервисы вместо резолверов
+![14.png](angular/resolvers/14.png)    
+Пока вся логика прописанная в резолвере не отработает, компонент не будет показан пользователю.  
+Но на самом деле нужно просто учитывать этот момент при использовании резолверов. И не допускать в логике к примеру бесконечных циклов) 
+или передачи большого объема данных.  
+
+### Плюсы и минусы использования резолвера
+![15.png](angular/resolvers/15.png)   
+
+## Как можно использовать резолверы
+1. Для предзагрузки данных(используем кеш и не паримся насчет задержек)
+1. Для обработки ошибок до перехода на роут
+1. Для авторизации через сторонние сервисы (редирект с сервиса на роут с резолвером)
+1. Для перехода на другие ресурсы с использованием роутера (нет компонента, только резолвер с редиректом)
+
+</div>
+</details>
+
+
+<details>
+<summary>46. Angular SSR & CSR.</summary>
+<div>
+
+**SSR** - Server Side Rendering.  
+Это технология, которая позволяет, с помощью Node. js, запускать 
+JavaScript код на сервере (а не в браузере как обычно) и готовый результат отправлять пользователю,
+избегая лишней нагрузки на его браузер и компьютер.   
+
+**CSR** - Client Side Rendering.  
+
+### SSR нужен для того что бы:
+1. что бы поисковые движки могли нормально проиндексировать страницу.  
+Например если страница не отрендерилась за 5 сек, Google будет индексировать только 
+то что есть на данный момент.
+2. для того что бы на слабых устройствах пользователю не приходилось ждать 
+пока отработает Javascript и нарисуется страница.
+   
+
+</div>
+</details>
+
+<details>
+<summary>47. Angular Change Detection.</summary>
+<div>
+
+Change Detection means updating the view (DOM) when the data has changed.
+
+
+>By default, Angular will check every time something may have changed, this is called dirty checking.
+
+</div>
+</details>
+
+
 # Полезные_ссылки_и_спасибо_за_предоставленные_материалы:
 - [Angular 40 вопросов для собеседования](https://www.youtube.com/watch?v=rc3E4tplFCU)
-- [Angular_9_Что_нового?](angular.md)
+- [Angular_9_Что_нового?](angular/angular.md)
 - [Что такое Ленивая загрузка? (devacademy)](https://devacademy.ru/article/kak-pravilno-realizovat-lenivuyu-zagruzku-moduley-v-angular-8)
 - [Разбираемся в Angular Ivy: Incremental DOM и Virtual DOM](https://habr.com/ru/post/448048/)
 

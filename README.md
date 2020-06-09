@@ -16,6 +16,9 @@
 1. [Основные типы алгоритмов](lectures/algorithms/baseTypes/baseTypes.md)
 1. [Что такое нотация «О-большое» и как ей пользоваться?](lectures/algorithms/bigOBase/bigO.md)
 
+### Helpful links:
+[algorithms-cours](https://www.coursera.org/learn/algorithms-part1#syllabus)
+
 ## JS
 1. [Что такое DOM?](lectures/foundation/dom/dom.md)
 1. [Фибоначчи](lectures/js/fibonacci/fibonacci.md)
@@ -55,3 +58,6 @@
 
 ## Материал для лабы 
 [учебный материал (на примере разбора лендинга)](lectures/future_lab_lectures.md)
+
+## My second trip to EPAM in US
+[Preparing for a technical interview](epam/plan.md)

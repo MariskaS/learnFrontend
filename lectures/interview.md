@@ -1113,6 +1113,10 @@ unsubscribe observables/detach event handlers/stop timers, etc. to avoid`изб�
      // Insert Logic Here!
   }
 ```
+
+### Helpful links
+- [Angular lifecycle hooks для чайников](https://www.youtube.com/watch?v=dVeUz0cKGtM)
+
 </div>
 </details>
 
@@ -1609,12 +1613,50 @@ Change Detection means updating the view (DOM) when the data has changed.
 </div>
 </details>
 
+<details>
+<summary>48. RxJs patterns take and takeUntil.</summary>
+<div>
+
+### Терминология:
+- Обзервбл - это поток.(Стрим) 
+	- одни из важных методов .next(посылает значения в поток) и .complete();
+	- name$ - $ в конце обозначение что сущность является потоком
+- RxJs - работает с потоками.
+- промисы - работают с одним значением.
+- .pipe() - (труба) создает свой собственный новый поток который мы можем фильтровать изменять или соединять 
+два разных потока(вызывается до обзервабла - в случае если он конечно если нам вообще нужен измененный поток, 
+можно подписаться и без .pipe())
+
+### поток от промиса отличается:
+тем что можно подавать множество данных.  
+>К промису(так как у него всего одно значение) пописываться не надо в отличает от обервабла.
+
+### takeUntil(related with Angular component's ngOnDestroy())
+	- Emits the values emitted by the source Observable until a notifier Observable emits a value.
+	- не нужно использовать .complete(), т.к он сам завершает поток
+	
+### Helpful links
+- [Observable rxjs-dev](https://rxjs-dev.firebaseapp.com/guide/observable)
+- [take rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/take)
+- [takeUntil rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/takeUntil)
+- [How to clean-up Observables in Angular](https://medium.com/impact-developers/how-to-destroy-observables-in-angular-313dec343b45)
+
+</div>
+</details>
+
 
 # Полезные_ссылки_и_спасибо_за_предоставленные_материалы:
+### Angular
 - [Angular 40 вопросов для собеседования](https://www.youtube.com/watch?v=rc3E4tplFCU)
 - [Angular_9_Что_нового?](angular/angular.md)
 - [Что такое Ленивая загрузка? (devacademy)](https://devacademy.ru/article/kak-pravilno-realizovat-lenivuyu-zagruzku-moduley-v-angular-8)
 - [Разбираемся в Angular Ivy: Incremental DOM и Virtual DOM](https://habr.com/ru/post/448048/)
+
+### RxJs
+- [Observable rxjs-dev](https://rxjs-dev.firebaseapp.com/guide/observable)
+- [take rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/take)
+- [takeUntil rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/takeUntil)
+- [How to clean-up Observables in Angular](https://medium.com/impact-developers/how-to-destroy-observables-in-angular-313dec343b45)
 
 
 

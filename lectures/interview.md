@@ -1338,7 +1338,7 @@ More information: [Introduction to forms in Angular](https://angular.io/guide/fo
 </details>
 
 <details>
-<summary>37. What is dirty checking?</summary>
+<summary>37. </summary>
 <div>
 
 ...

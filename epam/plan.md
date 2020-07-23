@@ -23,6 +23,7 @@
 - [medium - Вы не знаете JS: типы данных и значения](https://medium.com/@Dimetrio89/%D0%B2%D1%8B-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D0%B5%D1%82%D0%B5-js-%D1%82%D0%B8%D0%BF%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-f95a605de82)
 - [medium - eventloop](https://medium.com/devschacht/javascript-eventloop-explained-f2dcf84e36ee)
 - [Функция обратного вызова](https://developer.mozilla.org/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F_%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2%D0%B0)
+- [Классы, объекты и наследование в JavaScript](https://habr.com/ru/post/15444/)
 
 ### Algorithms
 - [algorithms - coursera](https://www.coursera.org/learn/algorithms-part1#syllabus)

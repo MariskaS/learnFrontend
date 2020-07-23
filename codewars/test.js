@@ -1,45 +1,40 @@
-let memo = [];
-// для оптимизации запоминаем в глобальный массив -
-// результаты предыдущих вызовов вместо того, чтобы вычислять их заново.
+// сделать собственную реализацию map, filter, find, forEach,
+// reduce и поместить в наследник класса Array (написать функцию inherit). Использовать es3.
+// console.log(arr.map((item) => item < 3))
+// - создать класс MyArr , который будет наследником класса Array
+// - inherit - это глобальная
 
-const fib = n => {
-    if (memo[n]) return memo[n];
-    // TODO: WTF console.log('fesrf', memo[n])
+// function inherit(child, parent) {
+//     // MyArr должен стать наследником класса Array и получить доступ ко всем его свойства и методам.
+//     // поведение MyArray должно быть таким же как Array.
+//     const Empty = function(){}; // создаем пустую функцию-конструтор
+//     Empty.prototype = parent.prototype;
+//     child.prototype = new Empty();
+//     child.prototype.constructor = child;
+//     child.super = parent
+// }
+//
+// let MyArray = function (...args) {
+//     MyArray.super(...args)
+// }
+// inherit(MyArray, Array)
+//
+// let a = new MyArray(3);
+const arr = [1, 2, 3, 4];
 
-    let current = 0;
-    let next = 1;
+Array.prototype.myMap = function (cb) {
+    const arr = this;
+    const newArr = []
 
-    for (let i = 0; i < n; i++) {
-        memo[i] = current;
-        // console.log(`memo[i] ${i}: `, current);
-        // step 0: memo[i] => 0;
-        // step 1: memo[i] => 1;
-        // step 2: memo[i] => 1;
-        // step 3: memo[i] => 2;
-        // step 4: memo[i] => 3;
-        // step 2: memo[i] => 5;
-
-        // console.log(`memo step ${i}: `, memo);
-        // step 0: memo => [0];
-        // step 1: memo => [0, 1];
-        // step 2: memo => [0, 1, 1];
-        // step 3: memo => [0, 1, 1, 2];
-        // step 4: memo => [0, 1, 1, 2, 3];
-        // step 5: memo => [0, 1, 1, 2, 3, 5];
-
-        [current, next] = [next, current + next] // swap
-        // console.log(`swap step ${i}: `, [current, next]);
-        // step 0: swap => [ 1, 1 ];
-        // step 1: swap => [ 1, 2 ];
-        // step 2: swap => [ 2, 3 ];
-        // step 3: swap => [ 3, 5 ];
-        // step 4: swap => [ 5, 8 ];
-        // step 5: swap => [ 8, 13 ];
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(cb(arr[i], i, arr))
     }
 
-    return current;
+    return newArr;
 }
 
-console.log(fib(0)); // 34
-// console.log(fib(8)); // 21
-console.log('global memo', memo); // [0, 1,  1,  2, 3, 5, 8, 13, 21]
+console.log(
+    arr.myMap((currItem, idx, arr) => currItem + 1)
+)
+
+

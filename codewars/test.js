@@ -1,40 +1,23 @@
-// сделать собственную реализацию map, filter, find, forEach,
-// reduce и поместить в наследник класса Array (написать функцию inherit). Использовать es3.
-// console.log(arr.map((item) => item < 3))
-// - создать класс MyArr , который будет наследником класса Array
-// - inherit - это глобальная
+const arr = [ 1, 2, 0, 2, 2,3,5,9]
 
-// function inherit(child, parent) {
-//     // MyArr должен стать наследником класса Array и получить доступ ко всем его свойства и методам.
-//     // поведение MyArray должно быть таким же как Array.
-//     const Empty = function(){}; // создаем пустую функцию-конструтор
-//     Empty.prototype = parent.prototype;
-//     child.prototype = new Empty();
-//     child.prototype.constructor = child;
-//     child.super = parent
-// }
-//
-// let MyArray = function (...args) {
-//     MyArray.super(...args)
-// }
-// inherit(MyArray, Array)
-//
-// let a = new MyArray(3);
-const arr = [1, 2, 3, 4];
 
-Array.prototype.myMap = function (cb) {
-    const arr = this;
-    const newArr = []
+function nextId(ids) {
+    const sortArr = ids.sort((a, b) => a - b);
+    console.log('sortArr',sortArr)
+    let i = 0;
+    const sortArrLn = sortArr.length;
 
-    for (let i = 0; i < arr.length; i++) {
-        newArr.push(cb(arr[i], i, arr))
+    for (;i < sortArrLn; i++) {
+        let curr = sortArr[i];
+        let next = sortArr[i + 1];
+
+        if (next - curr > 1) return console.log('next', next)
+        if (next === curr) {
+            return
+        }
     }
 
-    return newArr;
+    return sortArr.length
 }
 
-console.log(
-    arr.myMap((currItem, idx, arr) => currItem + 1)
-)
-
-
+console.log(nextId(arr))

@@ -1,7 +1,6 @@
 **learnFrontend v 0.3**
 
 ## [Front End Developer Interview - short answers](lectures/interview.md)
-
 ## HTML & CSS
 1. [Box Model](lectures/html_css/box_model/box_model.md) 
 1. [Несколько важных вещей которые следует знать о table](lectures/html_css/table/table.md) 
@@ -11,6 +10,7 @@
 1. [Grid Layout](lectures/html_css/grid/grid.md) 
 1. [CSS препроцессоры](lectures/html_css/css_preprocessors/css_preprocessors.md)
 1. [CSS псевдо классы](lectures/html_css/pseudo_classes/pseudo_classes.md)
+1. [Тестирование верстки](lectures/html_css/test/test.md)
 
 ## Алгоритмы
 1. [Основные типы алгоритмов](lectures/algorithms/baseTypes/baseTypes.md)

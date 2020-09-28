@@ -1,20 +1,21 @@
 const arr = [1, 2, 3, 4];
 
+/**
+ * myFind - own implementation .map.
+ * @param cb - callback(currItem, idx, arr).
+ * @returns {*} founded item.
+ */
 Array.prototype.myFind = function(cb) {
     const arr = this;
-    let result = undefined;
 
     for(let i = 0; i < arr.length; i++) {
         // если arr[i] > 2
         if(cb(arr[i])) {
-            result = arr[i];
-            break;
+            return arr[i];
         }
     }
-
-    return result;
 }
-
+// while
 console.log(
     arr.myFind((currItem, idx, arr) => currItem > 2)
 )

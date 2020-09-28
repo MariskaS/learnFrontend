@@ -1,5 +1,10 @@
 const arr = [1, 2, 3, 4];
 
+/**
+ * myMap - own implementation .map.
+ * @param cb - callback(currItem, idx, arr).
+ * @returns {Array}
+ */
 Array.prototype.myMap = function (cb) {
     const arr = this;
     const newArr = []

@@ -572,6 +572,57 @@ DOM формируется из написанного вами HTML-кода. �
 
 </div>
 </details>
+<details>
+<summary>12. Cookies vs Local Storage vs Session</summary>
+<div> 
+   
+![CookiesLocalStorSession.png](../img/CookiesLocalStorSession.png)    
+
+</div>
+</details>
+<details>
+<summary>13. Cookies vs Local Storage vs Session</summary>
+<div> 
+   
+![CookiesLocalStorSession.png](../img/CookiesLocalStorSession.png)    
+
+</div>
+</details>
+
+<details>
+<summary>14. Linked Lists/Связные списки</summary>
+<div> 
+
+#### Зачем нужны Linked Lists/Связные списки если есть Array?
+![LinkedList.png](../img/LinkedList.png)      
+[Youtube - How To Implement Linked Lists With Test Driven Development In JavaScript](https://www.youtube.com/watch?v=gJjPWA8wpQg)
+У меня есть объект но я не знаю его индекса и мне нужно вернуть следующий элемент после моего объекта:
+Если это обычный массив  - мне нужно пройти весь массив пока я не найду 
+полное совпадение моему объекту и потом взять следующий элемент массива
+Если это Связанные списки -  Связанные списки это структура данных, в которой
+каждый элемент содержит данные и указатель на следующий элемент списка 
+(а если это двусвязный список, то также ссылку на предыдущий элемент). 
+Это означает что я найду следующий объект за O(1).
+>Linked Lists позволяет найти следующий или предыдущий элемент за O(1), т.к. 
+каждый объект может хранить ссылки на next и prev элементы.  
+[Гид по computer science: 2.3. Связные списки](https://drive.google.com/file/d/1IGYqb4caqA5bj672C-GaKacwmuwtzL1_/view?usp=sharing)
+
+</div>
+</details>
+
+<details>
+<summary>15. Stacks and Queues/Стеки и кучи</summary>
+<div> 
+
+#### Зачем нужны Linked Lists если есть Array?
+![LinkedList.png](../img/LinkedList.png)      
+[Youtube - How To Implement Linked Lists With Test Driven Development In JavaScript](https://www.youtube.com/watch?v=gJjPWA8wpQg)
+>Linked Lists позволяет найти следующий или предыдущий элемент за O(1), т.к. 
+каждый объект может хранить ссылки на next и prev элементы.  
+[Гид по computer science: 2.3. Связные списки](https://drive.google.com/file/d/1IGYqb4caqA5bj672C-GaKacwmuwtzL1_/view?usp=sharing)
+
+</div>
+</details>
 
 ## Angular/RxJs
 

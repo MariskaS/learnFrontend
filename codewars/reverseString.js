@@ -6,11 +6,12 @@
 
 // перебрать строку и запушить в новую с конца
 function reverseString(str) {
-    let newStr = '';
-    const strLen = str.length;
+
     // i = последнему символ строки
     // пока i >= 0 - чтобы дойти строго до начала строки
     for (let i = strLen - 1; i >= 0; i--) {
+        let newStr = '';
+        const strLen = str.length;
         newStr = newStr + str[i]
     }
 

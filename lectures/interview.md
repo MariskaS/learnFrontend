@@ -612,6 +612,7 @@ Linked Lists относятся к структурам реализуемым �
 [Youtoube Архив 2018 - Часть 11: Структуры данных: связные списки, деревья структур в JavaScript](https://www.youtube.com/watch?v=XNliOCBhYRY)
 #### Big O - LinkedList vs Array
 ![LinkedListBigO.png](../img/LinkedListBigO.png)
+
 </div>
 </details>
 
@@ -651,6 +652,21 @@ Linked Lists относятся к структурам реализуемым �
 <div> 
 
 
+</div>
+</details>
+
+<details>
+<summary>15. EventLoop в JavaScript</summary>
+<div>  
+
+> EventLoop - цикл который берет следующий элемент из очереди.  
+- **Heap** - В кучу попадают ссылочные типы данных (объекты, массивы).
+- **Stack** - В js в стеке хранятся все значимые и не ссылочные типы данных, типа string. 
+- **Callback queue** - для выполнения асинхронных операций.
+
+![EventLoop.png](../img/EventLoop.png)   
+
+- [[medium] Объяснение работы EventLoop в JavaScript](https://medium.com/devschacht/javascript-eventloop-explained-f2dcf84e36ee)
 </div>
 </details>
 

@@ -809,21 +809,6 @@ P.S. - в ``bootstrap`` мы указываем тот компонент с к�
 </details>
 
 <details>
-<summary>11. Что такое Observables</summary>
-<div>
- По сути это паттерн проектирование, которое активно используется в Angular, 
- за счет встроенной библиотеки RxJs.   
- 
- Говорит он о том что у нас есть некоторые объекты которые могут получать уведомления.
- Т.е. если мы подписываемся на определенные уведомления, то мы являемся обзервелами и
- когда приходит уведомление мы его получаем моментально в нужных местах.  
-
- Полезные материалы:  
- - [Observable в RxJS: краткое введение](https://medium.com/@kosmogradsky/observable-%D0%B2-rxjs-%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5-%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-34939ff5f7d7)
-</div>
-</details>
-
-<details>
 <summary>12. Что такое интерполяция</summary>
 <div>
 
@@ -1296,6 +1281,10 @@ P.S. -> в примере ниже мы клонируем `req` и это об�
 <summary>29. Зачем Zone.js</summary>
 <div>
 
+> Zone - It is a wrapper for global functions, properties and methods. Needed for detectchanges.   
+> Detectchanges - any changes to the DOM, including window resize or mouse movement.
+
+
 **Zone.js** - играет одну из важнейших ролей в энгулар. Он отвечает за реактивность.
 
 Zone.js присутствует в ядре энгулар. В Angular с ее помощью все приложение разделяется 
@@ -1316,6 +1305,7 @@ Zone полезная для фреймворков, с ее помощью мо
 <details>
 <summary>30. Какие есть стратегии загрузки модулей</summary>
 <div>
+
 Речь про lazy loading (ленивая загрузка по требованию).
 
 ### Что такое Ленивая загрузка?
@@ -1747,33 +1737,21 @@ Change Detection means updating the view (DOM) when the data has changed.
 </details>
 
 <details>
-<summary>48. RxJs patterns take and takeUntil.</summary>
+<summary>48. Why do we need common components?</summary>
 <div>
 
-### Терминология:
-- Обзервбл - это поток.(Стрим) 
-	- одни из важных методов .next(посылает значения в поток) и .complete();
-	- name$ - $ в конце обозначение что сущность является потоком
-- RxJs - работает с потоками.
-- промисы - работают с одним значением.
-- .pipe() - (труба) создает свой собственный новый поток который мы можем фильтровать изменять или соединять 
-два разных потока(вызывается до обзервабла - в случае если он конечно если нам вообще нужен измененный поток, 
-можно подписаться и без .pipe())
+> To move common repeating logic and not duplicate code.  
+As a result, such code will be easier to maintain and test.
 
-### поток от промиса отличается:
-тем что можно подавать множество данных.  
->К промису(так как у него всего одно значение) пописываться не надо в отличает от обервабла.
-
-### takeUntil(related with Angular component's ngOnDestroy())
-	- Emits the values emitted by the source Observable until a notifier Observable emits a value.
-	- не нужно использовать .complete(), т.к он сам завершает поток
-	
-### Helpful links
-- [Observable rxjs-dev](https://rxjs-dev.firebaseapp.com/guide/observable)
-- [take rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/take)
-- [takeUntil rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/takeUntil)
-- [How to clean-up Observables in Angular](https://medium.com/impact-developers/how-to-destroy-observables-in-angular-313dec343b45)
-
+Common Component creation process:   
+1. you need to understand what should go to input and what should go to output;
+2. understand if a directive, or a component is needed;  
+P.S. the directive, unlike the component, does not have its own template and styles and also has a different lifecycle.
+3. determine what should be at the time of component initialization (ngOninit);
+4. determine if we need nested components;
+5. If we are going to connect a service to a common component, it must be a common service;
+As a result, if we create a separate common Component with a common Service, we can create a separate module that will be easier to maintain and test.
+   
 </div>
 </details>
 
@@ -1784,12 +1762,3 @@ Change Detection means updating the view (DOM) when the data has changed.
 - [Angular_9_Что_нового?](angular/angular.md)
 - [Что такое Ленивая загрузка? (devacademy)](https://devacademy.ru/article/kak-pravilno-realizovat-lenivuyu-zagruzku-moduley-v-angular-8)
 - [Разбираемся в Angular Ivy: Incremental DOM и Virtual DOM](https://habr.com/ru/post/448048/)
-
-### RxJs
-- [Observable rxjs-dev](https://rxjs-dev.firebaseapp.com/guide/observable)
-- [take rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/take)
-- [takeUntil rxjs-dev](https://rxjs-dev.firebaseapp.com/api/operators/takeUntil)
-- [How to clean-up Observables in Angular](https://medium.com/impact-developers/how-to-destroy-observables-in-angular-313dec343b45)
-
-
-

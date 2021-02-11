@@ -1,8 +1,8 @@
 const arr = [1, 2, 3, 4];
 
 /**
- * myFind - own implementation .map.
- * @param cb - callback(currItem, idx, arr).
+ * myFind - own implementation of .map.
+ * @param cb {function} - callback(currItem, idx, arr).
  * @returns {*} founded item.
  */
 Array.prototype.myFind = function(cb) {

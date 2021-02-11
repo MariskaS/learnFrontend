@@ -1,7 +1,3 @@
-
-#### Notices:
-1. [BIO - Experience/background](bio.md)
-
 ## Helpful links:
 ### Js
 - [Основы ООП](https://habr.com/ru/post/345658/)
@@ -28,13 +24,11 @@
 ### Algorithms
 - [algorithms - coursera](https://www.coursera.org/learn/algorithms-part1#syllabus)
 - [JS: Interview Algorithm](http://www.thatjsdude.com/interview/js1.html)
-- [Графики основных математических функций, факториал, понятие логарифма.]найти
+- [Графики основных математических функций, факториал, понятие логарифма.]
 - [Задачи на применение алгоритмов](https://www.codewars.com/kata/search/java?q=&r%5B%5D=-7&tags=Algorithms&beta=false)
 
 ### Angular / RXJs
 - [Rolling Scopes - Angular course - список тем](https://docs.rs.school/#/angular-course)
-- [Vladilen M - Angular course](https://www.vladilen.dev/angular)
-- [NgRx + Facades - medium](https://medium.com/@thomasburlesonIA/ngrx-facades-better-state-management-82a04b9a1e39)
 - [Евгений Поздняков — RxJS: производительность и утечки памяти в большом приложении](https://www.youtube.com/watch?v=7806msvJ1HE&t=513s)
 - [assign](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 - [material.angular.io/cdk/](https://material.angular.io/cdk/categories)
@@ -117,13 +111,6 @@ removed, or moved, the query list will be updated, and the changes observable of
 ## EventLoop
 все асинхр.функции помещаются в callback queue (очередь обратного вызова)
 
-## subject & observables 
-основная разница в том что subject дает возможность управлять потоком вне observable
-
-## observables  -  нужен что бы иметь непрерывный поток данных(c промисом так не получится, он работает только с одним). 
- Promise не может выдать несколько значений. Он может только выполнить resolve или reject, т.е. иметь только два состояния. 
- Поток же может передавать несколько значений, и может быть повторно использован.
-
 ## что про перфоманс
 - отписки от потоков 
 - changeDetection: ChangeDetectionStrategy.OnPush
@@ -135,7 +122,7 @@ removed, or moved, the query list will be updated, and the changes observable of
 
 ## 1. scope бывает локальный(function(var) /block(let/const)) и глобальный(браузер = window/node = global)
 - scope наследуется - функция ребенок имеет доступ к переменным родителя.
-- hoisting - подъем переменных(именно их декларирование, не значение) в своем scoupe 
+- hoisting - подъем переменных(именно их декларирование, не значение) в своем scope 
 
 ## 2. Контекст - это сам объект в котором вызвана функция
 - в случае apply, call или bind - this это объект, который передается в качестве аргумента.

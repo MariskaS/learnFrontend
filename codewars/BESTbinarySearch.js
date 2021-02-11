@@ -1,45 +1,69 @@
 const arr = [10, 25, 34, 77, 94];
 
+/**
+ *
+ * @param arr
+ * @param el
+ * @returns {number}
+ */
 function binSearch(arr, el) {
-// отсортировать массив
-// определить границы массива
-// найти середину и сравнить с искомым элементом
-// если mid > el -> идем в лево
-// если mid < el -> идем в право
+  /**
+   * 1. Define the boundaries of the array;
+   *
+   * 2. Find the middle of the array and compare with
+   * the desired element;
+   *
+   * 3. if (mid > el) -> go to the left || if (mid < el)-> go to
+   * the right;
+   */
 
-    // границы массива
-    let left = 0;
-    let right = arr.length - 1;
+  // Define the boundaries of the array.
+  let left = 0;
+  let right = arr.length - 1;
 
-    // если первый или последний элементы массива равны элементу -
-    // возвращаем индексы.
-    // Данный метод повышает производительность на массивах с миллионом значений.
-    if(arr[left] === el) return left;
-    if(arr[right] === el) return right;
+  /**
+   * If the first or last elements of the array
+   * are equal to the element - return the index and exit the
+   * function without going into the 'while' loop.
+   *
+   * This method improves performance on arrays
+   * with millions of values.
+   * /
+   if(arr[left] === el) return left;
+   if(arr[right] === el) return right;
 
-    // если разница между right и left равна 1, значит между этими элементами никакого другого не будет.
-    while (right - left > 1) {
-        // ищем середину массива -
-        // находим среднее число - пример с яблоками(у васи 4 у меня 2 -> (6+2)/2 = 4 это среднее число)
-        let mid = Math.floor((right + left) / 2);
+   /**
+   * We enter the loop only if there is more than 1 value
+   * between the right and left borders.
+   */
+  while (right - left > 1) {
+      // Find the middle - average.
+      let mid = Math.floor((right + left) / 2);
 
-        if (arr[mid] === el) {
-            return mid
-        }
+      if (arr[mid] === el) {
+          return mid
+      }
 
-        if (arr[mid] > el) {
-            // el = 10, mid = 20 -> mid > el -> отрезаем правую часть массива и правая граница становиться mid
-            right = mid
-        }
+      if (arr[mid] > el) {
+          /**
+           * Cut off the right side of the array
+           * and the right border becomes the middle.
+           */
+          right = mid
+      }
 
-        if (arr[mid] < el) {
-            left = mid
-        }
-    }
+      if (arr[mid] < el) {
+          /**
+           * Cut off the left side of the array
+           * and the left border becomes the middle.
+           */
+          left = mid
+      }
+  }
 
-    return -1
+  return -1
 
 }
 
 
-console.log(binSearch(arr, 78))
+console.log(binSearch(arr, 77)) // => 3 - index of 77
